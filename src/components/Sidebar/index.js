@@ -9,15 +9,15 @@ const Sidebar = ({isOpen,toggle}) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about">About</SidebarLink>
+          <SidebarLink to="about" onClick={toggle}>About</SidebarLink>
 
-          <SidebarLink to="events">Events</SidebarLink>
+          <SidebarLink to="events" onClick={toggle}>Events</SidebarLink>
 
-          <SidebarLink to="team">Team</SidebarLink>
+          <SidebarLink to="team" onClick={toggle}>Team</SidebarLink>
 
-          <SidebarLink to="contact">Contact</SidebarLink>
+          <SidebarLink to="contact" onClick={toggle}>Contact</SidebarLink>
 
-          <SidebarLink to="signup">Sign Up</SidebarLink>
+          <SidebarLink to="signup" onClick={toggle}>Sign Up</SidebarLink>
         </SidebarMenu>
 
         <SidebtnWrap>
