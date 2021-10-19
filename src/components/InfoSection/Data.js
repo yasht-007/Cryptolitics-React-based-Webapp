@@ -1,5 +1,5 @@
 export const home0bj0ne = {
-  id: 'about',
+  id: 'events',
   lightBg: false,
   lightText: true,
   lightTextDesc: true,
@@ -17,7 +17,7 @@ export const home0bj0ne = {
 };
 
 export const home0bjTwo = {
-  id: 'crypto',
+  id: 'about',
   lightBg: true,
   lightText: false,
   lightTextDesc: false,
@@ -32,4 +32,22 @@ export const home0bjTwo = {
   dark: false,
   primary: false,
   darkText: true,
+};
+
+export const home0bjThree = {
+  id: 'contact',
+  lightBg: false,
+  lightText: true,
+  lightTextDesc: true,
+  topline: 'Premium NFT',
+  headLine: "Non Fungible Tokens",
+  description:
+    "Get access to our exclusive app that allows you to see unlimited nft transactions without getting charged any fees.",
+  buttonLabel: "Get started",
+  imgStart: true,
+  img: require("../../images/svg-3.svg"),
+  alt: "nft",
+  dark: true,
+  primary: true,
+  darkText: false,
 };

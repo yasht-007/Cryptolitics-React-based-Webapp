@@ -20,7 +20,7 @@ const HeroSection = () => {
   };
 
   return (
-    <HeroContainer>
+    <HeroContainer id="home">
       <HeroBg>
         <VideoBg autoPlay loop muted src={Video} type="/video/mp4" />
       </HeroBg>
@@ -28,11 +28,22 @@ const HeroSection = () => {
       <HeroContent>
         <HeroH1>Cryptocurrency Made Easy</HeroH1>
         <HeroP>
-          Let's get started today to get free cryptocurrency statistics,
-          events and latest news.
+          Let's get started today to get free cryptocurrency statistics, events
+          and latest news.
         </HeroP>
         <HeroBtnWrapper>
-          <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true'>
+          <Button
+            to="signup"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+            onMouseEnter={onHover}
+            onMouseLeave={onHover}
+            primary="true"
+            dark="true"
+          >
             Get started {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
