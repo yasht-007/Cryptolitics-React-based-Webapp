@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
 
 const CoinPage = () => {
-    return (
-        <div>
-            Coin Page  
-        </div>
-    )
-}
 
-export default CoinPage
+  return (
+    <h1>ghh</h1>
+  );
+};
+
+export default CoinPage;

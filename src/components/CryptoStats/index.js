@@ -1,6 +1,7 @@
 import { makeStyles } from "@material-ui/core";
 import React from "react";
 import Banner from "./Banner";
+import CoinTable from "./CoinTable";
 
 const Stats = () => {
   const useStyles = makeStyles(() => ({
@@ -17,6 +18,7 @@ const Stats = () => {
     <>
       <div className={classes.App}>
         <Banner />
+        <CoinTable />
       </div>
     </>
   );
