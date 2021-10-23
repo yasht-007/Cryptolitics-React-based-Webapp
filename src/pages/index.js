@@ -11,6 +11,8 @@ import Services from "../components/Services";
 import CryptoStats from "../components/CryptoStats";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
+import Team from "../components/Team";
+
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +31,7 @@ const Home = () => {
       <InfoSection {...home0bjTwo} />
       <Services />
       <InfoSection {...home0bjThree} />
+      <Team />
       <Footer />
     </>
   );

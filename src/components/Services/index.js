@@ -15,28 +15,28 @@ import {
 
 const Services = () => {
   return (
-    <ServicesContainer id="team">
-      <ServicesH1>Our Services</ServicesH1>
+    <ServicesContainer id="aboutus">
+      <ServicesH1>About Cryptolitics</ServicesH1>
       <ServicesWrapper>
         <ServicesCard>
           <ServicesIcon src={Icon1} />
-          <ServicesH2>Reduce Expenses</ServicesH2>
+          <ServicesH2>Reduce Confusion</ServicesH2>
           <ServicesP>
-            We help reduce your fess and increase your overall revenue.
+            We help reduce your confusion and increase your overall revenue.
           </ServicesP>
         </ServicesCard>
         <ServicesCard>
           <ServicesIcon src={Icon2} />
-          <ServicesH2>Virtual Offices</ServicesH2>
+          <ServicesH2>Live Crypto-Stats</ServicesH2>
           <ServicesP>
-            You can access our platform online anywhere in the world.
+            You can access our platform and get live crypto currency stats.
           </ServicesP>
         </ServicesCard>
         <ServicesCard>
           <ServicesIcon src={Icon3} />
-          <ServicesH2>Premium Benefits</ServicesH2>
+          <ServicesH2>Future Events</ServicesH2>
           <ServicesP>
-            Unlock our special membership card that returns 5% cash back.
+            Get free future events of coins that will boost your strategy.
           </ServicesP>
         </ServicesCard>
       </ServicesWrapper>
