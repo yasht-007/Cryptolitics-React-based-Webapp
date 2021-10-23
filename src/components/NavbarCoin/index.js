@@ -33,10 +33,6 @@ const NavbarCoin = () => {
             <NavLogo to="/" onClick={toggleHome}>
               Cryptolitics
             </NavLogo>
-
-            <NavbarContainer>
-              <NavLogo to=" ">Etherum</NavLogo>
-            </NavbarContainer>
           </NavbarContainer>
 
           <div>

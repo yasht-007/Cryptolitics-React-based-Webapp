@@ -33,7 +33,7 @@ const HeroSection = () => {
         </HeroP>
         <HeroBtnWrapper>
           <Button
-            to="signup"
+            to="crypto"
             smooth={true}
             duration={500}
             spy={true}
@@ -46,6 +46,7 @@ const HeroSection = () => {
           >
             Get started {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
+
         </HeroBtnWrapper>
       </HeroContent>
     </HeroContainer>

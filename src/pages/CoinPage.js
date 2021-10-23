@@ -13,7 +13,7 @@ import { CryptoState } from "../CryptoContext";
 
 const CoinPage = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+ 
   const toggle = () => {
     setIsOpen(!isOpen);
   };

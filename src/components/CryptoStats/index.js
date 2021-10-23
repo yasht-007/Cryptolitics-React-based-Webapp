@@ -16,7 +16,7 @@ const Stats = () => {
 
   return (
     <>
-      <div className={classes.App}>
+      <div className={classes.App} id="crypto">
         <Banner />
         <CoinTable />
       </div>
