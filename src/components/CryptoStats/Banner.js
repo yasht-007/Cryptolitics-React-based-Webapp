@@ -26,7 +26,7 @@ const useStyles = makeStyles(() => ({
 const Banner = () => {
   const classes = useStyles();
   return (
-    <div className={classes.banner}>
+    <div className={classes.banner} id="markets">
       <Container className={classes.bannerContent}>
         <div className={classes.tagLine}>
           <Typography

@@ -87,14 +87,14 @@ export default function CoinsTable() {
       <Container style={{ textAlign: "center" }}>
         <Typography
           variant="h4"
-          style={{ margin: 18, fontFamily: "Montserrat" }}
+          style={{ margin: 20, fontFamily: "Montserrat" }}
         >
-          Cryptocurrency Prices by Market Cap
+          Top Cryptocurrency Prices by Market Cap
         </Typography>
         <TextField
           label="Search For a Crypto Currency.."
           variant="outlined"
-          style={{ marginBottom: 20, width: "100%" }}
+          style={{ marginBottom: 30, width: "100%" }}
           onChange={(e) => setSearch(e.target.value)}
         />
         <TableContainer component={Paper}>

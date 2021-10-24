@@ -66,14 +66,14 @@ const Navbar = ({ toggle }) => {
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to="events"
+                  to="markets"
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact="true"
                   offset={-80}
                 >
-                  Events
+                  Markets
                 </NavLinks>
               </NavItem>
               <NavItem>
