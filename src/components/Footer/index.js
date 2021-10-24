@@ -24,30 +24,55 @@ import {
 } from "./FooterElement";
 
 const Footer = () => {
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.opener = null;
+
+    window.location.reload();
+  };
+
   const toggleHome = () => {
     scroll.scrollToTop();
   };
 
   return (
-    <FooterContainer>
+    <FooterContainer id="footer">
       <FooterWrap>
         <FooterLinksContainer>
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>About Us</FooterLinkTitle>
-              <FooterLink to="/signin">How it works</FooterLink>
-              <FooterLink to="/signin">Testimonials</FooterLink>
-              <FooterLink to="/signin">Careers</FooterLink>
-              <FooterLink to="/signin">Investors</FooterLink>
-              <FooterLink to="/signin">Terms of Service</FooterLink>
+              <FooterLink
+                to=" "
+                onClick={() =>
+                  openInNewTab(
+                    "https://www.nasdaq.com/articles/news-and-insights/what-is-cryptocurrency-and-how-it-works"
+                  )
+                }
+              >
+                How it works
+              </FooterLink>
+              <FooterLink to=" ">Testimonials</FooterLink>
+              <FooterLink
+                to=" "
+                onClick={() =>
+                  openInNewTab(
+                    "https://time.com/nextadvisor/investing/cryptocurrency/future-of-cryptocurrency/"
+                  )
+                }
+              >
+                Careers
+              </FooterLink>
+              <FooterLink
+                to=" "
+                onClick={() =>
+                  openInNewTab("https://www.blockchain.com/legal/terms")
+                }
+              >
+                Terms of Service
+              </FooterLink>
             </FooterLinkItems>
-            <FooterLinkItems>
-              <FooterLinkTitle>Contact Us</FooterLinkTitle>
-              <FooterLink to="/signin">Contact</FooterLink>
-              <FooterLink to="/signin">Support</FooterLink>
-              <FooterLink to="/signin">Destinations</FooterLink>
-              <FooterLink to="/signin">Sponsorships</FooterLink>
-            </FooterLinkItems>
+            
           </FooterLinksWrapper>
 
           <FooterLinksWrapper>
@@ -60,10 +85,18 @@ const Footer = () => {
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>Social Media</FooterLinkTitle>
-              <FooterLink to="/">Instagram</FooterLink>
-              <FooterLink to="/">Facebook</FooterLink>
-              <FooterLink to="/">Youtube</FooterLink>
-              <FooterLink to="/">Twitter</FooterLink>
+              <FooterLink to="" onClick={() =>
+                  openInNewTab("https://www.instagram.com/yasht.007")}>
+                Instagram</FooterLink>
+              <FooterLink to="/" onClick={() =>
+                  openInNewTab("https://www.facebook.com/yashtiwari40/")
+                }>Facebook</FooterLink>
+              <FooterLink to="/" onClick={() =>
+                  openInNewTab("//www.youtube.com/c/TechieYash007")
+                }>Youtube</FooterLink>
+              <FooterLink to="/" onClick={() =>
+                  openInNewTab("https://twitter.com/Yash06981451")
+                }>Twitter</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>
@@ -78,10 +111,10 @@ const Footer = () => {
               &nbsp;All rights reserved.
             </WebsiteRights>
             <SocialIcons>
-              <SocialIconLink href="/" target="_blank" aria-label="Facebook">
+              <SocialIconLink href="https://www.facebook.com/yashtiwari40/" target="_blank" aria-label="Facebook">
                 <FaFacebook />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" aria-label="Instagram">
+              <SocialIconLink href="https://www.instagram.com/yasht.007/" target="_blank" aria-label="Instagram">
                 <FaInstagram />
               </SocialIconLink>
               <SocialIconLink
@@ -91,10 +124,10 @@ const Footer = () => {
               >
                 <FaYoutube />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" aria-label="Twitter">
+              <SocialIconLink href="https://twitter.com/Yash06981451" target="_blank" aria-label="Twitter">
                 <FaTwitter />
               </SocialIconLink>
-              <SocialIconLink href="/" target="_blank" aria-label="Linkedin">
+              <SocialIconLink href="https://www.linkedin.com/in/yash-tiwari-7113b5215/" target="_blank" aria-label="Linkedin">
                 <FaLinkedin />
               </SocialIconLink>
             </SocialIcons>
