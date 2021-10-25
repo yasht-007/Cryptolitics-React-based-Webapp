@@ -23,21 +23,21 @@ const Team = () => {
           <ServicesIcon src={Icon1} />
           <ServicesH2>Yash Tiwari</ServicesH2>
           <ServicesP>
-            Designer.
+           Developer + Designer. 
           </ServicesP>
         </ServicesCard>
         <ServicesCard>
           <ServicesIcon src={Icon2} />
           <ServicesH2>Rishi Shukla</ServicesH2>
           <ServicesP>
-            Devloper.
+            Developer.
           </ServicesP>
         </ServicesCard>
         <ServicesCard>
           <ServicesIcon src={Icon3} />
           <ServicesH2>Keval Patel</ServicesH2>
           <ServicesP>
-           Designer.
+          Developer. 
           </ServicesP>
         </ServicesCard>
         <ServicesCard>

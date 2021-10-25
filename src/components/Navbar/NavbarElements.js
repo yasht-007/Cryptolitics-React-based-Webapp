@@ -98,8 +98,9 @@ export const NavBtnLink = styled(LinkR)`
   white-space: nowrap;
   padding: 10px 18px;
   text-decoration: none;
-  color: #010606;
+  color: #fff;
   font-size: 16px;
+  font-weight: 300;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -107,6 +108,6 @@ export const NavBtnLink = styled(LinkR)`
     text-decoration: none;
     background: #fff;
     transition: all 0.2s ease-in-out;
-    color: #010606;
+    color: #000000;
   }
 `;

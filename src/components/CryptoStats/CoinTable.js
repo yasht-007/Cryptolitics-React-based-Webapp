@@ -15,9 +15,10 @@ import {
   TableContainer,
   Table,
   Paper,
+  Select,
+  MenuItem,
 } from "@material-ui/core";
-import axios from "axios";
-import { CoinList } from "../../config/api";
+
 import { useHistory } from "react-router-dom";
 import { CryptoState } from "../../CryptoContext";
 
@@ -26,12 +27,11 @@ export function numberWithCommas(x) {
 }
 
 export default function CoinsTable() {
-  const [coins, setCoins] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
 
-  const { currency, symbol } = CryptoState();
+  const { currency, symbol, coins, loading, fetchCoins, setCurrency } =
+    CryptoState();
 
   const useStyles = makeStyles({
     row: {
@@ -61,14 +61,6 @@ export default function CoinsTable() {
     },
   });
 
-  const fetchCoins = async () => {
-    setLoading(true);
-    const { data } = await axios.get(CoinList(currency));
-
-    setCoins(data);
-    setLoading(false);
-  };
-
   useEffect(() => {
     fetchCoins();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -97,6 +89,41 @@ export default function CoinsTable() {
           style={{ marginBottom: 30, width: "100%" }}
           onChange={(e) => setSearch(e.target.value)}
         />
+
+        <div style={{display: "flex",justifyContent:"space-between"}}>
+
+        <Typography
+          variant="h5"
+          style={{ margin: 20, fontFamily: "Montserrat" }}
+        >
+          Currency :
+        </Typography>
+          <Select
+            variant="outlined"
+            style={{
+             
+              outline: "none",
+              whiteSpace: "nowrap",
+              cursor: "pointer",
+              fontSize: "16px",
+              background: "#01bf71",
+              alignItems: "center",
+              width: 82,
+              fontWeight: "bold",
+              height: 37,
+              margin: 22,
+              borderRadius: "25px",
+              textDecoration: "none",
+            }}
+            value={currency}
+            onChange={(e) => setCurrency(e.target.value)}
+          >
+            <MenuItem value={"USD"}>USD</MenuItem>
+            <MenuItem value={"INR"}>INR</MenuItem>
+            <MenuItem value={"EUR"}>EUR</MenuItem>
+          </Select>{" "}
+        </div>
+
         <TableContainer component={Paper}>
           {loading ? (
             <LinearProgress style={{ backgroundColor: "#01bf71" }} />
