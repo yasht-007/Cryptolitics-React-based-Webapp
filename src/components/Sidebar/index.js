@@ -13,7 +13,7 @@ import AuthModal from "../Authentication/AuthModal";
 const Sidebar = ({ isOpen, toggle }) => {
 
   return (
-    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+    <SidebarContainer isOpen={isOpen} >
       <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
@@ -36,7 +36,7 @@ const Sidebar = ({ isOpen, toggle }) => {
           </SidebarLink>
 
           {/* <SidebarLink to="" onClick={toggle}>Sign Up</SidebarLink> */}
-          <div
+          <div 
             style={{
               alignItems: "center",
               justifyContent: "center",

@@ -24,3 +24,32 @@ export const Button = styled(Link)`
     background: ${({ primary }) => (primary ? "#fff" : "#01BF71")};
   }
 `;
+
+export const Buttonsecond = styled(Link)`
+  border-radius: 50px;
+
+  background: #01bf71;
+
+  white-space: nowrap;
+  padding: 10px 18px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    text-decoration: none;
+    background: #fff;
+    transition: all 0.2s ease-in-out;
+    color: #000000;
+  }
+`;

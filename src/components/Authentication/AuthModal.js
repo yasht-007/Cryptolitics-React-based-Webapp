@@ -1,12 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import { NavBtn, NavBtnLink } from "../Navbar/NavbarElements";
 import { AppBar, Tab, Tabs } from "@material-ui/core";
-import  Login  from "./Login";
-import  Signup  from "./Signup";
+import Login from "./Login";
+import Signup from "./Signup";
+import { Buttonsecond } from "../ButtonElement";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     width: 400,
-    backgroundColor: theme.palette.background.paper,
-    color: "white",
+    backgroundColor: "white",
+    color: "black",
     borderRadius: 10,
   },
 }));
@@ -25,6 +25,11 @@ const useStyles = makeStyles((theme) => ({
 export default function AuthModal() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+
+  const [hover, setHover] = useState(false);
+  const onHover = () => {
+    setHover(!hover);
+  };
 
   const handleOpen = () => {
     setOpen(true);
@@ -41,11 +46,22 @@ export default function AuthModal() {
 
   return (
     <div>
-      <NavBtn>
-        <NavBtnLink to="" style={{ marginLeft: "20px"}} onClick={handleOpen}>
-          Login
-        </NavBtnLink>
-      </NavBtn>
+      <Buttonsecond
+        to="crypto"
+        smooth={true}
+        duration={500}
+        spy={true}
+        onClick={handleOpen}
+        exact="true"
+        offset={-80}
+        onMouseEnter={onHover}
+        onMouseLeave={onHover}
+        primary="true"
+        dark="true"
+      >
+        Login
+      </Buttonsecond>
+
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -63,17 +79,17 @@ export default function AuthModal() {
             <AppBar
               position="static"
               style={{
-                backgroundColor: "transparent",
-                color: "#01bf71",
+                backgroundColor: "#01bf71",
+                color: "white",
               }}
             >
               <Tabs
                 value={value}
                 onChange={handleChange}
                 variant="fullWidth"
-                style={{ borderRadius: 10 }}
+                style={{ borderRadius: 10, }}
               >
-                <Tab label="Login" />
+                <Tab label="Login"/>
                 <Tab label="Sign Up" />
               </Tabs>
             </AppBar>
