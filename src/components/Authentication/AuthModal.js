@@ -47,7 +47,7 @@ export default function AuthModal() {
   return (
     <div>
       <Buttonsecond
-        to="crypto"
+        to=""
         smooth={true}
         duration={500}
         spy={true}

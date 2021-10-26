@@ -9,6 +9,11 @@ const CryptoContext = ({ children }) => {
   const [symbol, setSymbol] = useState("₹");
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [alert, setAlert] = useState({
+    open: false,
+    message: "",
+    type: "success",
+  });
   // const [user, setUser] = useState(null);
 
   const fetchCoins = async () => {
@@ -28,7 +33,7 @@ const CryptoContext = ({ children }) => {
   return (
     <>
       <Crypto.Provider
-        value={{ currency, symbol, setCurrency, coins, loading, fetchCoins }}
+        value={{ currency, symbol, setCurrency, coins, loading, fetchCoins,alert,setAlert }}
       >
         {children}
       </Crypto.Provider>
