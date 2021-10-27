@@ -30,7 +30,7 @@ export default function CoinsTable() {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
 
-  const { currency, symbol, coins, loading, fetchCoins, setCurrency } =
+  const { currency, symbol, coins, loading, fetchCoins, setCurrency,setAlert } =
     CryptoState();
 
   const useStyles = makeStyles({
@@ -48,6 +48,16 @@ export default function CoinsTable() {
       },
     },
   });
+
+  const toggleChange = (e) => {
+    setCurrency(e.target.value);
+
+    setAlert({
+      open: true,
+      type: "success",
+      message: "Currency Changed !",
+    });
+  };
 
   const classes = useStyles();
   const history = useHistory();
@@ -116,7 +126,7 @@ export default function CoinsTable() {
               textDecoration: "none",
             }}
             value={currency}
-            onChange={(e) => setCurrency(e.target.value)}
+            onChange={(e) => toggleChange(e)}
           >
             <MenuItem value={"USD"}>USD</MenuItem>
             <MenuItem value={"INR"}>INR</MenuItem>

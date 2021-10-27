@@ -11,13 +11,23 @@ import {
 import AuthModal from "../Authentication/AuthModal";
 import { CryptoState } from "../../CryptoContext";
 import UserSidebar from "../UserSidebar";
+import { Select, MenuItem } from "@material-ui/core";
 
 const SidebarCoin = ({ isOpen, toggle }) => {
+  const { user, currency, setCurrency, setAlert } = CryptoState();
 
-  const {user} = CryptoState();
+  const toggleChange = (e) => {
+    setCurrency(e.target.value);
+
+    setAlert({
+      open: true,
+      type: "success",
+      message: "Currency Changed !",
+    });
+  };
 
   return (
-    <SidebarContainer isOpen={isOpen} >
+    <SidebarContainer isOpen={isOpen}>
       <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
@@ -27,7 +37,7 @@ const SidebarCoin = ({ isOpen, toggle }) => {
             Home
           </SidebarLink>
 
-          <div 
+          <div
             style={{
               alignItems: "center",
               justifyContent: "center",
@@ -42,6 +52,32 @@ const SidebarCoin = ({ isOpen, toggle }) => {
           >
             {user ? <UserSidebar /> : <AuthModal />}
           </div>
+
+          <SidebarLink to="">
+            <Select
+              variant="outlined"
+              style={{
+                outline: "none",
+                whiteSpace: "nowrap",
+                cursor: "pointer",
+                fontSize: "16px",
+                background: "#01bf71",
+                alignItems: "center",
+                width: 82,
+                fontWeight: "bold",
+                height: 37,
+                margin: 22,
+                borderRadius: "25px",
+                textDecoration: "none",
+              }}
+              value={currency}
+              onChange={(e) => toggleChange(e)}
+            >
+              <MenuItem value={"USD"}>USD</MenuItem>
+              <MenuItem value={"INR"}>INR</MenuItem>
+              <MenuItem value={"EUR"}>EUR</MenuItem>
+            </Select>
+          </SidebarLink>
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>

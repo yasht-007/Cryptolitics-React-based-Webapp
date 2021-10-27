@@ -25,7 +25,7 @@ const CoinInfo = ({ coin }) => {
       flexDirection: "column",
       alignItems: "center",
       justifyContent: "center",
-      marginTop: 25,
+      marginTop: 35,
       padding: 40,
       [theme.breakpoints.down("md")]: {
         width: "100%",
