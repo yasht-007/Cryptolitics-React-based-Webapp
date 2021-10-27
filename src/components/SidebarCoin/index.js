@@ -6,13 +6,13 @@ import {
   SidebarWrapper,
   SidebarMenu,
   SidebarLink,
-} from "./SidebarElements";
+} from "./SidebarCoinElement";
 
 import AuthModal from "../Authentication/AuthModal";
 import { CryptoState } from "../../CryptoContext";
 import UserSidebar from "../UserSidebar";
 
-const Sidebar = ({ isOpen, toggle }) => {
+const SidebarCoin = ({ isOpen, toggle }) => {
 
   const {user} = CryptoState();
 
@@ -23,23 +23,10 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about" onClick={toggle}>
-            About
+          <SidebarLink to="/" onClick={toggle}>
+            Home
           </SidebarLink>
 
-          <SidebarLink to="events" onClick={toggle}>
-            Events
-          </SidebarLink>
-
-          <SidebarLink to="team" onClick={toggle}>
-            Team
-          </SidebarLink>
-
-          <SidebarLink to="contact" onClick={toggle}>
-            Contact
-          </SidebarLink>
-
-          {/* <SidebarLink to="" onClick={toggle}>Sign Up</SidebarLink> */}
           <div 
             style={{
               alignItems: "center",
@@ -61,4 +48,4 @@ const Sidebar = ({ isOpen, toggle }) => {
   );
 };
 
-export default Sidebar;
+export default SidebarCoin;

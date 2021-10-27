@@ -1,12 +1,14 @@
-import { MenuItem, Select } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { IconContext } from "react-icons/lib";
 import { CryptoState } from "../../CryptoContext";
 import { animateScroll as scroll } from "react-scroll";
-import { Nav, NavbarContainer, NavLogo } from "../NavbarCoin/NavbarCoinElement";
+import { MobileIcon, Nav, NavbarContainer, NavLogo, NavMenu } from "../NavbarCoin/NavbarCoinElement";
+import AuthModal from "../Authentication/AuthModal";
+import UserSidebar from "../UserSidebar";
+import { FaBars } from "react-icons/fa";
 
-const NavbarCoin = () => {
-  const { currency, setCurrency } = CryptoState();
+const NavbarCoin = ({toggle}) => {
+  const { user } = CryptoState();
   const [scrollNav, setScrollNav] = useState(false);
 
   const changeNav = () => {
@@ -33,34 +35,16 @@ const NavbarCoin = () => {
             <NavLogo to="/" onClick={toggleHome}>
               Cryptolitics
             </NavLogo>
+
+            <MobileIcon onClick={toggle}>
+              <FaBars />
+            </MobileIcon>
+
+            <NavMenu>
+            {user ? <UserSidebar /> : <AuthModal />}
+            </NavMenu>
           </NavbarContainer>
 
-          <div>
-            <Select
-              variant="outlined"
-              style={{
-                display: "flex",
-                outline: "none",
-                whiteSpace: "nowrap",
-                cursor: "pointer",
-                fontSize: "16px",
-                background: "#01bf71",
-                alignItems: "center",
-                width: 82,
-                fontWeight: "bold",
-                height: 37,
-                margin: 22,
-                borderRadius: "25px",
-                textDecoration: "none",
-              }}
-              value={currency}
-              onChange={(e) => setCurrency(e.target.value)}
-            >
-              <MenuItem value={"USD"}>USD</MenuItem>
-              <MenuItem value={"INR"}>INR</MenuItem>
-              <MenuItem value={"EUR"}>EUR</MenuItem>
-            </Select>{" "}
-          </div>
         </Nav>
       </IconContext.Provider>
     </>

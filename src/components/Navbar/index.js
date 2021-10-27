@@ -12,9 +12,12 @@ import {
   NavItem,
 } from "./NavbarElements";
 import AuthModal from "../Authentication/AuthModal";
+import { CryptoState } from "../../CryptoContext";
+import UserSidebar from "../UserSidebar";
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
+  const { user } = CryptoState();
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -97,7 +100,7 @@ const Navbar = ({ toggle }) => {
                 </NavLinks>
               </NavItem>
 
-              <AuthModal />
+            {user ? <UserSidebar /> : <AuthModal />}
             </NavMenu>
             {/* <NavBtn>
               <NavBtnLink to="/signin">Sign In</NavBtnLink>

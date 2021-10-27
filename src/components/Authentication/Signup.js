@@ -65,7 +65,7 @@ const Signup = ({ handleClose }) => {
         onChange={(e) => setEmail(e.target.value)}
         fullWidth
         focused
-        color="secondary"
+        color="success"
         InputProps={{
           className: classes.multilineColor,
         }}
@@ -75,7 +75,7 @@ const Signup = ({ handleClose }) => {
         label="Enter Password"
         type="password"
         value={password}
-        color="secondary"
+        color="success"
         onChange={(e) => setPassword(e.target.value)}
         fullWidth
         focused
@@ -87,7 +87,7 @@ const Signup = ({ handleClose }) => {
         variant="outlined"
         label="Confirm Password"
         type="password"
-        color="secondary"
+        color="success"
         value={confirmPassword}
         onChange={(e) => setConfirmPassword(e.target.value)}
         fullWidth

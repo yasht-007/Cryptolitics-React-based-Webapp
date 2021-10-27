@@ -1,10 +1,14 @@
 import { Box, TextField, Button, makeStyles } from "@material-ui/core";
 import React, { useState } from "react";
+import { auth } from "../../Firebase";
+import { CryptoState } from "../../CryptoContext";
+import { signInWithEmailAndPassword} from "firebase/auth";
+
 
 const Login = ({ handleClose }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = () => {};
+  const { setAlert } = CryptoState();
 
 
 const useStyles = makeStyles((theme) => ({
@@ -12,6 +16,35 @@ const useStyles = makeStyles((theme) => ({
     color:'black',
 }
 }));
+
+const handleSubmit = async () => {
+  if (!email || !password) {
+    setAlert({
+      open: true,
+      message: "Please fill all the Fields",
+      type: "error",
+    });
+    return;
+  }
+
+  try {
+    const result = await signInWithEmailAndPassword(auth, email, password);
+    setAlert({
+      open: true,
+      message: `Sign In Successful. Welcome ${result.user.email}`,
+      type: "success",
+    });
+
+    handleClose();
+  } catch (error) {
+    setAlert({
+      open: true,
+      message: error.message,
+      type: "error",
+    });
+    return;
+  }
+};
 
 const classes = useStyles();
 
@@ -32,7 +65,7 @@ const classes = useStyles();
         onChange={(e) => setEmail(e.target.value)}
         fullWidth
         focused
-        color="secondary"
+        color="success"
         InputProps={{
           className: classes.multilineColor
         }}
@@ -43,7 +76,7 @@ const classes = useStyles();
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        color="secondary"
+        color="success"
         focused
         fullWidth
         InputProps={{
