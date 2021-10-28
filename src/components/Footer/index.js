@@ -44,22 +44,14 @@ const Footer = () => {
               <FooterLinkTitle>About Us</FooterLinkTitle>
               <FooterLink
                 to=" "
-                onClick={() =>
-                  openInNewTab(
-                    "https://www.nasdaq.com/articles/news-and-insights/what-is-cryptocurrency-and-how-it-works"
-                  )
-                }
+                onClick={() => openInNewTab("https://bit.ly/3CmyT9u")}
               >
                 How it works
               </FooterLink>
               <FooterLink to=" ">Testimonials</FooterLink>
               <FooterLink
                 to=" "
-                onClick={() =>
-                  openInNewTab(
-                    "https://time.com/nextadvisor/investing/cryptocurrency/future-of-cryptocurrency/"
-                  )
-                }
+                onClick={() => openInNewTab("https://bit.ly/3biuLeB")}
               >
                 Careers
               </FooterLink>
@@ -72,31 +64,62 @@ const Footer = () => {
                 Terms of Service
               </FooterLink>
             </FooterLinkItems>
-            
           </FooterLinksWrapper>
 
           <FooterLinksWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>Videos</FooterLinkTitle>
-              <FooterLink to="/">Submit Video</FooterLink>
-              <FooterLink to="/">Ambassadors</FooterLink>
-              <FooterLink to="/">Agency</FooterLink>
-              <FooterLink to="/">Influencer</FooterLink>
+              <FooterLink
+                to="/"
+                onClick={() => openInNewTab("https://bit.ly/2ZvC7bT")}
+              >
+                About Crypto
+              </FooterLink>
+              <FooterLink
+                to="/"
+                onClick={() => openInNewTab("https://bit.ly/3mkikFq")}
+              >
+                About NFT's
+              </FooterLink>
+              <FooterLink
+                to="/"
+                onClick={() => openInNewTab("https://bit.ly/3jJIxf7")}
+              >
+                Watchlist Tutorial
+              </FooterLink>
+              <FooterLink
+                to="/"
+                onClick={() => openInNewTab("https://bit.ly/3jJIxf7")}
+              >
+                Influencer
+              </FooterLink>
             </FooterLinkItems>
             <FooterLinkItems>
               <FooterLinkTitle>Social Media</FooterLinkTitle>
-              <FooterLink to="" onClick={() =>
-                  openInNewTab("https://www.instagram.com/yasht.007")}>
-                Instagram</FooterLink>
-              <FooterLink to="/" onClick={() =>
-                  openInNewTab("https://www.facebook.com/yashtiwari40/")
-                }>Facebook</FooterLink>
-              <FooterLink to="/" onClick={() =>
-                  openInNewTab("//www.youtube.com/c/TechieYash007")
-                }>Youtube</FooterLink>
-              <FooterLink to="/" onClick={() =>
-                  openInNewTab("https://twitter.com/Yash06981451")
-                }>Twitter</FooterLink>
+              <FooterLink
+                to=""
+                onClick={() => openInNewTab("https://bit.ly/3bgYbd5")}
+              >
+                Instagram
+              </FooterLink>
+              <FooterLink
+                to="/"
+                onClick={() => openInNewTab("https://bit.ly/3mlefRi")}
+              >
+                Facebook
+              </FooterLink>
+              <FooterLink
+                to="/"
+                onClick={() => openInNewTab("https://bit.ly/3GqZch4")}
+              >
+                Youtube
+              </FooterLink>
+              <FooterLink
+                to="/"
+                onClick={() => openInNewTab("https://bit.ly/3pLn9dg")}
+              >
+                Twitter
+              </FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>
@@ -111,23 +134,39 @@ const Footer = () => {
               &nbsp;All rights reserved.
             </WebsiteRights>
             <SocialIcons>
-              <SocialIconLink href="https://www.facebook.com/yashtiwari40/" target="_blank" aria-label="Facebook">
+              <SocialIconLink
+                href="https://bit.ly/3mlefRi"
+                target="_blank"
+                aria-label="Facebook"
+              >
                 <FaFacebook />
               </SocialIconLink>
-              <SocialIconLink href="https://www.instagram.com/yasht.007/" target="_blank" aria-label="Instagram">
+              <SocialIconLink
+                href="https://bit.ly/3bgYbd5"
+                target="_blank"
+                aria-label="Instagram"
+              >
                 <FaInstagram />
               </SocialIconLink>
               <SocialIconLink
-                href="//www.youtube.com/c/TechieYash007"
+                href="https://bit.ly/3GqZch4"
                 target="_blank"
                 aria-label="Youtube"
               >
                 <FaYoutube />
               </SocialIconLink>
-              <SocialIconLink href="https://twitter.com/Yash06981451" target="_blank" aria-label="Twitter">
+              <SocialIconLink
+                href="https://bit.ly/3pLn9dg"
+                target="_blank"
+                aria-label="Twitter"
+              >
                 <FaTwitter />
               </SocialIconLink>
-              <SocialIconLink href="https://www.linkedin.com/in/yash-tiwari-7113b5215/" target="_blank" aria-label="Linkedin">
+              <SocialIconLink
+                href="https://www.linkedin.com/in/yash-tiwari-7113b5215/"
+                target="_blank"
+                aria-label="Linkedin"
+              >
                 <FaLinkedin />
               </SocialIconLink>
             </SocialIcons>

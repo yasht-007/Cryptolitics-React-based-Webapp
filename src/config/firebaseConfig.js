@@ -1,5 +1,5 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDDRBJZlRtnKYzyA1x5IR7Xj7zNaswjyRY",
+    apiKey: process.env.REACT_APP_API_KEY,
     authDomain: "cryptolitics-a259c.firebaseapp.com",
     projectId: "cryptolitics-a259c",
     storageBucket: "cryptolitics-a259c.appspot.com",

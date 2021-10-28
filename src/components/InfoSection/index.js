@@ -44,7 +44,8 @@ const InfoSection = ({
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
                   <Button
-                    to="https://www.google.com"
+                    to="footer"
+                    // onClick={console.log("Hello")}
                     smooth={true}
                     duration={500}
                     spy={true}

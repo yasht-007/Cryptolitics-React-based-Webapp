@@ -7,7 +7,7 @@ export const home0bj0ne = {
   headLine: "What is Cryptocurrency?",
   description:
     "A cryptocurrency is a form of digital asset based on a network that is distributed across a large number of computers. This decentralized structure allows them to exist outside the control of governments and central authorities.",
-  buttonLabel: "Get started",
+  buttonLabel: "Learn more",
   imgStart: true,
   img: require("../../images/svg-1.svg"),
   alt: "crypto",
