@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import {
   HeroContainer,
   HeroBg,
@@ -7,17 +7,21 @@ import {
   HeroContent,
   HeroP,
   HeroBtnWrapper,
-  ArrowForward,
+  // ArrowForward,
   ArrowRight,
 } from "./HeroElements";
 import Video from "../../videos/video.mp4";
-import { Button} from "../ButtonElement";
+import { Button } from "../ButtonElement";
 
 const HeroSection = () => {
-  const [hover, setHover] = useState(false);
-  const onHover = () => {
-    setHover(!hover);
-  };
+  // const [hover, setHover] = useState(false);
+  // const onHover = () => {
+  //   setHover(!hover);
+  // };
+
+  useEffect(() => {
+    window.WriteItJS.startAnimationOfNode("#first");
+  });
 
   return (
     <HeroContainer id="home">
@@ -26,7 +30,15 @@ const HeroSection = () => {
       </HeroBg>
 
       <HeroContent>
-        <HeroH1>Cryptocurrency Made Easy</HeroH1>
+        <HeroH1>
+          <p
+            id="first"
+            writeit-animate="1"
+            writeit-replace-next="Crypto$`currency` Made Easy"
+          >
+            Cryptolitics
+          </p>
+        </HeroH1>
         <HeroP>
           Let's get started today to get free cryptocurrency statistics, events
           and latest news.
@@ -39,15 +51,14 @@ const HeroSection = () => {
             spy={true}
             exact="true"
             offset={-80}
-            onMouseEnter={onHover}
-            onMouseLeave={onHover}
+            // onMouseEnter={onHover}
+            // onMouseLeave={onHover}
             primary="true"
             dark="true"
           >
-            Get started {hover ? <ArrowForward /> : <ArrowRight />}
+            Get started {  <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
-
       </HeroContent>
     </HeroContainer>
   );

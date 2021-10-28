@@ -19,7 +19,6 @@ import { doc, setDoc } from "firebase/firestore";
 import { db } from "../Firebase";
 import SidebarCoin from "../components/SidebarCoin/index";
 
-
 const CoinPage = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -162,118 +161,117 @@ const CoinPage = () => {
 
   return (
     <>
-      
-        <SidebarCoin isOpen={isOpen} toggle={toggle} />
-        <NavbarCoin toggle={toggle} />
+      <SidebarCoin isOpen={isOpen} toggle={toggle} />
+      <NavbarCoin toggle={toggle} />
 
-        <div
-          className={darkTheme}
-          style={{
-            backgroundColor: "black",
-            color: "white",
-          }}
-        >
-          <div className={classes.container}>
-            <div className={classes.sidebar}>
-              <img
-                // eslint-disable-next-line
-                src={coin?.image.large}
-                alt="coin"
-                height="200"
-                style={{ marginBottom: 20, marginTop: 60 }}
-              />
-              <Typography variant="h3" className={classes.heading}>
-                {coin?.name}
-              </Typography>
-              <Typography variant="subtitle1" className={classes.description}>
-                {ReactHtmlParser(coin?.description.en.split(". ")[0])}
-              </Typography>
-              <div className={classes.marketData}>
-                <span style={{ display: "flex" }}>
-                  <Typography variant="h5" className={classes.heading}>
-                    Rank:
-                  </Typography>
-                  &nbsp; &nbsp;
-                  <Typography
-                    variant="h5"
-                    style={{
-                      fontFamily: "Montserrat",
-                    }}
-                  >
-                    {numberWithCommas(coin?.market_cap_rank)}
-                  </Typography>
-                </span>
-                <span style={{ display: "flex" }}>
-                  <Typography variant="h5" className={classes.heading}>
-                    Current Price:
-                  </Typography>
-                  &nbsp; &nbsp;
-                  <Typography
-                    variant="h5"
-                    style={{
-                      fontFamily: "Montserrat",
-                    }}
-                  >
-                    {symbol}
-                    {numberWithCommas(
-                      coin?.market_data.current_price[currency.toLowerCase()]
-                    )}
-                  </Typography>
-                </span>
-                <span style={{ display: "flex" }}>
-                  <Typography variant="h5" className={classes.heading}>
-                    Market Cap:
-                  </Typography>
-                  &nbsp; &nbsp;
-                  <Typography
-                    variant="h5"
-                    style={{
-                      fontFamily: "Montserrat",
-                    }}
-                  >
-                    {symbol}
-                    {numberWithCommas(
-                      coin?.market_data.market_cap[currency.toLowerCase()]
-                        .toString()
-                        .slice(0, -6)
-                    )}
-                    M
-                  </Typography>
-                </span>
-                {user && (
-                  <Button
-                    variant="outlined"
-                    style={{
-                      width: "100%",
-                      height: 40,
-                      backgroundColor: inWatchlist ? "#ff0000" : "#01bf71",
-                    }}
-                    onClick={inWatchlist ? removeFromWatchlist : addToWatchlist}
-                  >
-                    {inWatchlist ? "Remove from Watchlist" : "Add to Watchlist"}
-                  </Button>
-                )}
+      <div
+        className={darkTheme}
+        style={{
+          backgroundColor: "black",
+          color: "white",
+        }}
+      >
+        <div className={classes.container}>
+          <div className={classes.sidebar}>
+            <img
+              // eslint-disable-next-line
+              src={coin?.image.large}
+              alt="coin"
+              height="200"
+              style={{ marginBottom: 20, marginTop: 60 }}
+            />
+            <Typography variant="h3" className={classes.heading}>
+              {coin?.name}
+            </Typography>
+            <Typography variant="subtitle1" className={classes.description}>
+              {ReactHtmlParser(coin?.description.en.split(". ")[0])}
+            </Typography>
+            <div className={classes.marketData}>
+              <span style={{ display: "flex" }}>
+                <Typography variant="h5" className={classes.heading}>
+                  Rank:
+                </Typography>
+                &nbsp; &nbsp;
+                <Typography
+                  variant="h5"
+                  style={{
+                    fontFamily: "Montserrat",
+                  }}
+                >
+                  {numberWithCommas(coin?.market_cap_rank)}
+                </Typography>
+              </span>
+              <span style={{ display: "flex" }}>
+                <Typography variant="h5" className={classes.heading}>
+                  Current Price:
+                </Typography>
+                &nbsp; &nbsp;
+                <Typography
+                  variant="h5"
+                  style={{
+                    fontFamily: "Montserrat",
+                  }}
+                >
+                  {symbol}
+                  {numberWithCommas(
+                    coin?.market_data.current_price[currency.toLowerCase()]
+                  )}
+                </Typography>
+              </span>
+              <span style={{ display: "flex" }}>
+                <Typography variant="h5" className={classes.heading}>
+                  Market Cap:
+                </Typography>
+                &nbsp; &nbsp;
+                <Typography
+                  variant="h5"
+                  style={{
+                    fontFamily: "Montserrat",
+                  }}
+                >
+                  {symbol}
+                  {numberWithCommas(
+                    coin?.market_data.market_cap[currency.toLowerCase()]
+                      .toString()
+                      .slice(0, -6)
+                  )}
+                  M
+                </Typography>
+              </span>
+              {user && (
+                <Button
+                  variant="outlined"
+                  style={{
+                    width: "100%",
+                    height: 40,
+                    backgroundColor: inWatchlist ? "#ff0000" : "#01bf71",
+                  }}
+                  onClick={inWatchlist ? removeFromWatchlist : addToWatchlist}
+                >
+                  {inWatchlist ? "Remove from Watchlist" : "Add to Watchlist"}
+                </Button>
+              )}
 
-                {!user && (
-                  <Button
-                    variant="outlined"
-                    style={{
-                      width: "100%",
-                      height: 40,
-                      backgroundColor: "#01bf71",
-                    }}
-                    onClick={toggleMessage}
-                  >
-                    {"Watchlist this coin"}
-                  </Button>
-                )}
-              </div>
+              {!user && (
+                <Button
+                  variant="outlined"
+                  style={{
+                    width: "100%",
+                    height: 40,
+                    backgroundColor: "#01bf71",
+                  }}
+                  onClick={toggleMessage}
+                >
+                  {"Watchlist this coin"}
+                </Button>
+              )}
             </div>
-            <CoinInfo coin={coin} />
           </div>
+          <CoinInfo coin={coin} />
         </div>
+      </div>
 
-        <Footer />
+      <Footer />
     </>
   );
 };
