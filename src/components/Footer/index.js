@@ -5,6 +5,7 @@ import {
   FaYoutube,
   FaTwitter,
   FaLinkedin,
+  FaGithub,
 } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
 import {
@@ -116,9 +117,9 @@ const Footer = () => {
               </FooterLink>
               <FooterLink
                 to="/"
-                onClick={() => openInNewTab("https://bit.ly/3pLn9dg")}
+                onClick={() => openInNewTab("https://bit.ly/3111frR")}
               >
-                Twitter
+                Github
               </FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
@@ -163,11 +164,19 @@ const Footer = () => {
                 <FaTwitter />
               </SocialIconLink>
               <SocialIconLink
-                href="https://www.linkedin.com/in/yash-tiwari-7113b5215/"
+                href="https://bit.ly/3nGgCO1"
                 target="_blank"
                 aria-label="Linkedin"
               >
                 <FaLinkedin />
+              </SocialIconLink>
+
+              <SocialIconLink
+                href="https://bit.ly/3111frR"
+                target="_blank"
+                aria-label="Github"
+              >
+                <FaGithub />
               </SocialIconLink>
             </SocialIcons>
           </SocialMediaWrap>

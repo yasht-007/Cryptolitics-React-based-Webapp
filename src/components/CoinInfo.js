@@ -44,11 +44,10 @@ const CoinInfo = ({ coin }) => {
     setHistoricData(data.prices);
   };
 
-
   useEffect(() => {
     fetchHistoricData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [days]);
+  }, [days, currency]);
 
   const darkTheme = createTheme({
     palette: {
