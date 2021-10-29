@@ -100,7 +100,7 @@ const Navbar = ({ toggle }) => {
                 </NavLinks>
               </NavItem>
 
-            {user ? <UserSidebar /> : <AuthModal />}
+              {user ? <UserSidebar /> : <AuthModal />}
             </NavMenu>
             {/* <NavBtn>
               <NavBtnLink to="/signin">Sign In</NavBtnLink>

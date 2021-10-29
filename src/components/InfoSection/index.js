@@ -45,7 +45,6 @@ const InfoSection = ({
                 <BtnWrap>
                   <Button
                     to="footer"
-                    // onClick={console.log("Hello")}
                     smooth={true}
                     duration={500}
                     spy={true}

@@ -43,20 +43,20 @@ const Footer = () => {
             <FooterLinkItems>
               <FooterLinkTitle>About Us</FooterLinkTitle>
               <FooterLink
-                to=" "
+                to=""
                 onClick={() => openInNewTab("https://bit.ly/3CmyT9u")}
               >
                 How it works
               </FooterLink>
               <FooterLink to=" ">Testimonials</FooterLink>
               <FooterLink
-                to=" "
+                to=""
                 onClick={() => openInNewTab("https://bit.ly/3biuLeB")}
               >
                 Careers
               </FooterLink>
               <FooterLink
-                to=" "
+                to=""
                 onClick={() =>
                   openInNewTab("https://www.blockchain.com/legal/terms")
                 }
