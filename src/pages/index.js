@@ -29,7 +29,7 @@ const Home = () => {
       <CryptoStats />
       <InfoSection {...home0bj0ne} />
       <InfoSection {...home0bjTwo} />
-      <Services />
+      <Services /> 
       <InfoSection {...home0bjThree} />
       <Team />
       <Footer />
