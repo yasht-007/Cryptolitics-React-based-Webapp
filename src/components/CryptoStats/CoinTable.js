@@ -97,7 +97,7 @@ export default function CoinsTable() {
           label="Search For a Crypto Currency.."
           variant="outlined"
           style={{ marginBottom: 30, width: "100%" }}
-          onChange={(e) => setSearch(e.target.value.toLowerCase)}
+          onChange={(e) => setSearch(e.target.value.toLowerCase())}
         />
 
         <div style={{display: "flex",justifyContent:"space-between"}}>
