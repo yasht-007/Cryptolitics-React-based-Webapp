@@ -8,7 +8,3 @@ Languages & Tools used :-
 Programming Languages :- HTML, CSS , Javascript.
 Technology:- React Js.
 API:- Coingecko
-
-My LinkedIn profile:- https://www.linkedin.com/in/yash-tiwari-7113b5215/
-
-If you find any bug, errors or any problem please report it to me on Linkedin or you can email me at official.yasht@gmail.com
